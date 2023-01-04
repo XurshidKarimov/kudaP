@@ -1,0 +1,38 @@
+@mixin flex($align: stretch, $justify: flex-start, $direction: row, $cGap: 0, $rGap: 0) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-direction: $direction;
+  
+    @if $cGap >0 {
+      column-gap: #{$cGap}+px;
+    }
+  
+    @if $rGap >0 {
+      row-gap: #{$rGap}+px;
+    }
+  }
+  
+  @mixin font($size, $weight, $height, $trans: none, $color: black) {
+    font: {
+      size: #{$size}+px;
+      weight: $weight;
+    }
+  
+    @if $height ==inherit or $height==none or $height==normal {
+      line-height: $height;
+    }
+  
+    @else {
+      line-height: #{$height}+px;
+    }
+  
+    text-transform: $trans;
+    color: $color;
+  }
+  
+  
+  @mixin responsiveProp($property, $maxSize, $minSize) {
+    $addSize: $maxSize - $minSize;
+    #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / (2560 - 320)));
+  }  
