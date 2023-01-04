@@ -1,0 +1,88 @@
+header {
+  position: fixed;
+  top: 0;
+  z-index: 9999999;
+  width: 100%;
+  background-color: white;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 30px 0;
+}
+.header-content__logo-link {
+  width: 150px;
+  transition: linear 0.3s;
+}
+.header-content__logo-link:hover {
+  transform: scale(1.04);
+}
+.header-content__logo-link:active {
+  opacity: 0.8;
+}
+.header-content__logo {
+  width: 100%;
+}
+.header-content__link-list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+}
+.header-content__link {
+  position: relative;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: inherit;
+  text-transform: none;
+  color: #222222;
+  transition: linear 0.2s;
+}
+.header-content__link:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -4px;
+  transform: translateX(-50%);
+  width: 0;
+  height: 3px;
+  background-color: #4d8291;
+  transition: linear 0.3s;
+}
+.header-content__link:hover:after {
+  width: 100%;
+}
+.header-content__contact-btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  padding: 10px 20px;
+  border: 2px solid #4d8291;
+  border-radius: 10px;
+  transition: linear 0.3s;
+}
+.header-content__contact-btn:hover {
+  transform: scale(1.04);
+}
+.header-content__contact-btn:active {
+  opacity: 0.8;
+}
+.header-content__contact-btn__content {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: inherit;
+  text-transform: none;
+  color: #4d8291;
+}
+.header-content__contact-telegram-img {
+  width: 30px;
+  height: 30px;
+}/*# sourceMappingURL=header.css.map */

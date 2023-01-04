@@ -1,0 +1,70 @@
+@use "../mixins";
+
+header{
+    position: fixed;
+    top: 0;
+    z-index: 9999999;
+    width: 100%;
+    background-color: white;
+}
+
+.header-content{
+    @include mixins.flex(center, space-between);
+    padding: 30px 0;
+    &__logo-link{
+        width: 150px;
+        transition: linear .3s;
+        &:hover{
+           transform: scale(1.04);
+        }
+        &:active{
+            opacity: .8;
+        }
+    }
+    &__logo{
+        width: 100%;
+    }
+    &__link-list{
+        @include mixins.flex(center, $cGap: 40);
+    }
+    &__link{
+        position: relative;
+        @include mixins.font(16, 600, inherit, none, #222222);
+        transition: linear .2s;
+        &:after{
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -4px;
+            transform: translateX(-50%);
+            width: 0;
+            height: 3px;
+            background-color: #4d8291;
+            transition: linear .3s;
+        }
+        &:hover:after{
+            width: 100%;
+        }
+    }
+    &__contact-btn{
+        @include mixins.flex(center, $cGap: 10);
+        padding: 10px 20px;
+        border: 2px solid #4d8291;
+        border-radius: 10px;
+        transition: linear .3s;
+        &:hover{
+           transform: scale(1.04);
+        }
+        &:active{
+            opacity: .8;
+        }
+    }
+    &__contact-btn__content{
+        @include mixins.font(16, 600, inherit, none, #4d8291);
+    }
+    &__contact-telegram-img{
+        width: 30px;
+        height: 30px;
+    }
+}
+
