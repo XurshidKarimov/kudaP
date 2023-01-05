@@ -1,0 +1,22 @@
+@use "../mixins";
+
+.hero-page{
+    background: url(../../assets/images/heropage__bg.webp) no-repeat;
+    background-position: center;
+    background-size: cover;
+    &__content{
+        min-height: 100vh;
+        @include mixins.flex(center);
+    }
+    &__title-block{
+        max-width: 585px;
+    }
+    &__main-title{
+        @include mixins.font(75, 800, inherit, none, #222222);
+        margin-bottom: 25px;
+    }
+    &__main-subtitle{
+        max-width: 560px;
+        @include mixins.font(18, 500, 30, none, #222222);
+    }
+}

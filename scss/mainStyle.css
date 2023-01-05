@@ -193,7 +193,7 @@ header {
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
-  padding: 30px 0;
+  padding: 10px 0;
 }
 .header-content__logo-link {
   width: 150px;
@@ -267,4 +267,36 @@ header {
 .header-content__contact-telegram-img {
   width: 30px;
   height: 30px;
+}
+
+.hero-page {
+  background: url(../../assets/images/heropage__bg.webp) no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.hero-page__content {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+.hero-page__title-block {
+  max-width: 585px;
+}
+.hero-page__main-title {
+  font-size: 75px;
+  font-weight: 800;
+  line-height: inherit;
+  text-transform: none;
+  color: #222222;
+  margin-bottom: 25px;
+}
+.hero-page__main-subtitle {
+  max-width: 560px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 30px;
+  text-transform: none;
+  color: #222222;
 }/*# sourceMappingURL=mainStyle.css.map */
