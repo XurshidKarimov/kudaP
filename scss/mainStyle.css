@@ -175,7 +175,7 @@ body {
 }
 
 .container {
-  max-width: 1230px;
+  max-width: 1340px;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -247,7 +247,6 @@ header {
   -moz-column-gap: 10px;
        column-gap: 10px;
   padding: 10px 20px;
-  border: 2px solid #4d8291;
   border-radius: 10px;
   transition: linear 0.3s;
 }
