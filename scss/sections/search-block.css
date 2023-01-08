@@ -4,9 +4,9 @@
 }
 .search-block__content {
   padding: 15px;
-  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.4588235294);
   border-radius: 10px;
   transition: linear 0.3s;
+  cursor: pointer;
 }
 .search-block__content:hover {
   box-shadow: 0 0 2px 2px #4d8291;

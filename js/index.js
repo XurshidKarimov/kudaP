@@ -5,8 +5,9 @@ document.addEventListener('DOMContentLoaded', function () {
       focus  : 'center',
       perPage: 3,
       gap: '1rem',
+      height: '17rem',
       autoScroll: {
-        speed: 0,
+        speed: 1.5,
       },
     }).mount(window.splide.Extensions);
   });
