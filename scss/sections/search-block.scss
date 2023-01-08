@@ -1,0 +1,44 @@
+@use "../mixins";
+
+.search-block{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    &__content{
+        padding: 15px;
+        box-shadow: 0 0 2px 2px #00000075;
+        border-radius: 10px;
+        transition: linear .3s;
+        &:hover{
+            box-shadow: 0 0 2px 2px #4d8291;
+        }
+    }
+    &__logo{
+        max-width: 120px;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    &__link-list{
+        @include mixins.flex(center, $cGap: 10);
+    }
+    &__list-item{
+        flex-grow: 1;
+    }
+    &__list-link{
+        width: 100%;
+        padding: 15px 20px;
+        border: 2px solid #22222280;
+        border-radius: 5px;
+        transition: linear .3s;
+        @include mixins.flex(center, $cGap: 10);
+        & img{
+            width: 20px;
+        }
+        & span{
+            @include mixins.font(16, 600, inherit, none, #222222);
+            flex-grow: 1;
+        }
+        &:hover{
+            border: 2px solid #222222;
+        }
+    }
+}
