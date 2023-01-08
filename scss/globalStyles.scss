@@ -1,5 +1,3 @@
-@use '../scss/mixins.scss';
-
 body{
     font-family: "Poppins", sans-serif;
 }
@@ -10,33 +8,7 @@ body{
     margin: 0 auto;
 }
 
-.splide__slide{
-    position: relative;
-    // height: 260px;
-    border-radius: 10px;
-    overflow: hidden;
-}
+// COLORS
 
-.splide__slide img{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-
-.card__content{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 25px;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    & .card__title{
-        @include mixins.font(30, 600, inherit, none, white);
-    }
-    & .card__genre{
-        @include mixins.font(20, 600, inherit, none, white);
-    }
-
-}
+$main-color: #4d8291;
+$main-black-color: #222222;
