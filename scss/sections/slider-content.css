@@ -1,5 +1,6 @@
 body {
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
 }
 
 .container {
@@ -39,8 +40,9 @@ body {
 }
 .cinema-sliders .slider-content .card__content {
   display: flex;
-  flex-direction: column;
+  align-items: stretch;
   justify-content: flex-end;
+  flex-direction: column;
   padding: 25px;
   position: absolute;
   width: 100%;

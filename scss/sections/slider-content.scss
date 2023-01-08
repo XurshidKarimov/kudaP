@@ -22,9 +22,7 @@
             }
         }
         & .card__content{
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
+            @include mixins.flex($justify: flex-end, $direction: column);
             padding: 25px;
             position: absolute;
             width: 100%;

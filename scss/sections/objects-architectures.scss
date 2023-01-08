@@ -1,0 +1,67 @@
+@use '../mixins.scss';
+@use '../globalStyles.scss';
+
+.objects-architectures{
+    &__content{
+        @include mixins.flex($direction: column, $rGap: 30);
+    }
+    &__objects{
+        @include mixins.flex($direction: column, $rGap: 30);
+    }
+    &__top-content{
+        @include mixins.flex(center, space-between);
+    }
+    &__title{
+        @include mixins.font(25, 800, inherit, none, globalStyles.$main-black-color);
+    }
+    &__btn{
+        padding: 10px 25px;
+        background-color: white;
+        @include mixins.font(15, 700, inherit, none, globalStyles.$main-black-color);
+    }
+    &__object-list{
+        @include mixins.flex($justify: space-between, $rGap: 20);
+        flex-wrap: wrap;
+    }
+    &__object-item{
+        flex-basis: 24%;
+        min-height: 400px;
+        position: relative;
+        box-shadow: 0 0 1px 1px lightgray;
+        border-radius: 10px;
+        overflow: hidden;
+        cursor: pointer;
+    }
+    &__imgbox{
+        width: 100%;
+        height: 300px;
+        & img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__heart-circle{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 40px;
+        height: 40px;
+        @include mixins.flex(center, center);
+        border-radius: 50%;
+        background-color: white;
+        box-shadow: 0 0 1px .5px #222222;
+        cursor: pointer;
+        & svg{
+            width: 20px;
+            fill: white;
+        }
+    }
+    &__card-content{
+        padding-left: 15px;
+        padding-top: 15px;
+    }
+    &__card-content-title{
+        margin-bottom: 10px;
+        @include mixins.font(18, 800, inherit, none, globalStyles.$main-black-color);
+    }
+}

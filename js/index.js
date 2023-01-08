@@ -26,5 +26,10 @@ document.addEventListener('DOMContentLoaded', function () {
     }).mount(window.splide.Extensions);
   });
 
-const snowflake = new SnowflakeJs(25,250,5000,5,25);
-snowflake.init();
+
+
+
+
+  
+// const snowflake = new SnowflakeJs(25,250,5000,5,25);
+// snowflake.init();
