@@ -13,6 +13,8 @@ body{
 .splide__slide{
     position: relative;
     height: 260px;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .splide__slide img{
