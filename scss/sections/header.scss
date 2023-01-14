@@ -1,5 +1,6 @@
 @use "../mixins";
 
+
 header{
     position: fixed;
     top: 0;
@@ -44,6 +45,17 @@ header{
         }
         &:hover:after{
             width: 100%;
+        }
+    }
+    & .darkmode-btn{
+        @include mixins.flex(center, $cGap: 20);
+        padding: 10px 25px;
+        box-shadow: 0 0 1px 1px lightgray;
+        border-radius: 10px;
+        cursor: pointer;
+        & img{
+            width: 25px;
+            height: 25px;
         }
     }
     &__contact-btn{

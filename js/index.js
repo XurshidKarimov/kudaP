@@ -27,9 +27,22 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
 
+let body = document.querySelector('body');
+let switchMode = document.getElementById('darkmode');
+let imgSwitch = document.getElementById('darkmodeimg');
+let [darkmodeTXT] = document.getElementsByClassName('darkmode-txt');
 
+switchMode.addEventListener('click', () => {
+  body.classList.toggle('dark');
+  switchMode.classList.toggle('light');
 
+  if(darkmodeTXT.innerHTML == 'Dark mode'){
+      darkmodeTXT.innerHTML = 'Light mode';
+      imgSwitch.setAttribute('src', './assets/icons/lightmode.svg');
+  }
+  else{
+    darkmodeTXT.innerHTML = 'Dark mode';
+    imgSwitch.setAttribute('src', './assets/icons/dark-mode-6682.svg');
+  }
 
-  
-// const snowflake = new SnowflakeJs(25,250,5000,5,25);
-// snowflake.init();
+})
