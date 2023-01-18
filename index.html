@@ -7,11 +7,14 @@
     <meta name="description" content="Biz orqali dam olish kunlarini maroqli o'tkazing.">
     <meta name="keywords" content="kuda, poyti, kudapoyti, kuda poyti, poyti kuda, dam olish, dam olish kunlari, dam olish kunlari qayerga, dam olish kuni">
     <link rel="shortcut icon" href="./assets/icons/favicon.png" type="image/png">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
-    <link rel="stylesheet" href="./scss/mainStyle.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"> -->
+    <link href="./scss/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="./pages/recomend/main.css">
+    <link href="./scss/mainStyle.css" rel="stylesheet">
     <title>Kuda poyti?</title>
 </head>
-<body>
+<body class="">
+    <div id="vueApp">
     <header class="dark:bg-slate-800">
         <div class="container">
             <div class="header-content">
@@ -37,7 +40,7 @@
                 </nav>
 
 
-                <div id="darkmode" class="darkmode-btn dark:bg-slate-800">
+                <div id="darkmode" class="darkmode-btn dark:bg-slate-800" @click="addDark()">
                     <img id="darkmodeimg" src="./assets/icons/dark-mode-6682.svg" alt="darkmode icon">
                     <span class="darkmode-txt dark:text-white">Dark mode</span>
                 </div>
@@ -115,13 +118,13 @@
                         <div id="splide1" class="splide" role="group" aria-label="Splide Basic HTML Example">
                         <div class="splide__track">
                               <ul class="splide__list">
-                                  <li class="splide__slide">
+                                  <li class="splide__slide" v-for="(val, index) in post" :key="val.id" @click="goProp(index)">
                                     <div class="img_box">
-                                        <img src="./assets/images/dr.strange.jpg" alt="img">
+                                        <img :src="val.imageUrl" alt="img" class="rasm">
                                     </div>
                                     <div class="card__content">
-                                        <h3 class="card__title">Doctor Strange</h3>
-                                        <p class="card__genre">Fantastic</p>
+                                        <h3 class="card__title">{{val.title}}</h3>
+                                        <p class="card__genre">{{val.placeSiteUrl}}</p>
                                     </div>
                                   </li>
                               </ul>
@@ -223,22 +226,22 @@
                 </div>
             </div>
         </section>
-       
+       <content-display :uzatildi="uzat"></content-display>
     </main>
     <footer>
         <div class="container">
 
         </div>
     </footer>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-    }
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <script type="module" src="./js/index.js"></script>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="../js/index.js"></script>
+<script src="./pages/recomend/index.js"></script>
+<script> 
+    const mountedApp = app.mount("#vueApp");
+</script>
 </body>
 </html>

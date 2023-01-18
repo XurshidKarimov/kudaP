@@ -1,0 +1,387 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+  
+  :focus,
+  :active {
+    outline: none;
+  }
+  
+  a {
+    display: inline-block;
+  }
+  
+  a:focus,
+  a:active {
+    outline: none;
+  }
+  
+  body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+  }
+  
+  nav,
+  footer,
+  header,
+  aside {
+    display: block;
+  }
+  
+  img {
+    display: block;
+  }
+  
+  .flow {
+    --flow-space: 1em;
+  }
+  
+  .flow > * + * {
+    margin-top: 1em;
+    margin-top: var(--flow-space);
+  }
+  
+  html,
+  body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 16px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+  }
+  
+  input,
+  button,
+  textarea,
+  select {
+    font-family: inherit;
+  }
+  
+  input::-ms-clear {
+    display: none;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+  
+  button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+  }
+  
+  a,
+  a:visited {
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: none;
+  }
+  
+  ul li {
+    list-style: none;
+  }
+  
+  img {
+    vertical-align: top;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: inherit;
+    font-weight: 400;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  ul[class],
+  ol[class],
+  li,
+  figure,
+  figcaption,
+  blockquote,
+  dl,
+  dd {
+    margin: 0;
+  }
+  
+  ul[class],
+  ol[class] {
+    padding: 0;
+  }
+  
+  /* poppins-regular - latin */
+  @font-face {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/poppins-v20-latin-regular.eot"); /* IE9 Compat Modes */
+    src: local(""), url("../fonts/poppins-v20-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/poppins-v20-latin-regular.woff2") format("woff2"), url("../fonts/poppins-v20-latin-regular.woff") format("woff"), url("../fonts/poppins-v20-latin-regular.ttf") format("truetype"), url("../fonts/poppins-v20-latin-regular.svg#Poppins") format("svg"); /* Legacy iOS */
+  }
+  /* poppins-500 - latin */
+  @font-face {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    src: url("../fonts/poppins-v20-latin-500.eot"); /* IE9 Compat Modes */
+    src: local(""), url("../fonts/poppins-v20-latin-500.eot?#iefix") format("embedded-opentype"), url("../fonts/poppins-v20-latin-500.woff2") format("woff2"), url("../fonts/poppins-v20-latin-500.woff") format("woff"), url("../fonts/poppins-v20-latin-500.ttf") format("truetype"), url("../fonts/poppins-v20-latin-500.svg#Poppins") format("svg"); /* Legacy iOS */
+  }
+  /* poppins-600 - latin */
+  @font-face {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    src: url("../fonts/poppins-v20-latin-600.eot"); /* IE9 Compat Modes */
+    src: local(""), url("../fonts/poppins-v20-latin-600.eot?#iefix") format("embedded-opentype"), url("../fonts/poppins-v20-latin-600.woff2") format("woff2"), url("../fonts/poppins-v20-latin-600.woff") format("woff"), url("../fonts/poppins-v20-latin-600.ttf") format("truetype"), url("../fonts/poppins-v20-latin-600.svg#Poppins") format("svg"); /* Legacy iOS */
+  }
+  /* poppins-700 - latin */
+  @font-face {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/poppins-v20-latin-700.eot"); /* IE9 Compat Modes */
+    src: local(""), url("../fonts/poppins-v20-latin-700.eot?#iefix") format("embedded-opentype"), url("../fonts/poppins-v20-latin-700.woff2") format("woff2"), url("../fonts/poppins-v20-latin-700.woff") format("woff"), url("../fonts/poppins-v20-latin-700.ttf") format("truetype"), url("../fonts/poppins-v20-latin-700.svg#Poppins") format("svg"); /* Legacy iOS */
+  }
+  /* poppins-800 - latin */
+  @font-face {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 800;
+    src: url("../fonts/poppins-v20-latin-800.eot"); /* IE9 Compat Modes */
+    src: local(""), url("../fonts/poppins-v20-latin-800.eot?#iefix") format("embedded-opentype"), url("../fonts/poppins-v20-latin-800.woff2") format("woff2"), url("../fonts/poppins-v20-latin-800.woff") format("woff"), url("../fonts/poppins-v20-latin-800.ttf") format("truetype"), url("../fonts/poppins-v20-latin-800.svg#Poppins") format("svg"); /* Legacy iOS */
+  }
+  body {
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+  }
+  
+  .container {
+    max-width: 1340px;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+  
+  header {
+    position: fixed;
+    top: 0;
+    z-index: 9999999;
+    width: 100%;
+    background-color: white;
+  }
+  
+  .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 10px 0;
+  }
+  .header-content__logo-link {
+    width: 150px;
+    transition: linear 0.3s;
+  }
+  .header-content__logo-link:hover {
+    transform: scale(1.04);
+  }
+  .header-content__logo-link:active {
+    opacity: 0.8;
+  }
+  .header-content__logo {
+    width: 100%;
+  }
+  .header-content__link-list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    -moz-column-gap: 40px;
+         column-gap: 40px;
+  }
+  .header-content__link {
+    position: relative;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: inherit;
+    text-transform: none;
+    color: #222222;
+    transition: linear 0.2s;
+  }
+  .header-content__link:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -4px;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    background-color: #4d8291;
+    transition: linear 0.3s;
+  }
+  .header-content__link:hover:after {
+    width: 100%;
+  }
+  .header-content .darkmode-btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+    padding: 10px 25px;
+    box-shadow: 0 0 1px 1px lightgray;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .header-content .darkmode-btn img {
+    width: 25px;
+    height: 25px;
+  }
+  .header-content__contact-btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: linear 0.3s;
+  }
+  .header-content__contact-btn:hover {
+    transform: scale(1.04);
+  }
+  .header-content__contact-btn:active {
+    opacity: 0.8;
+  }
+  .header-content__contact-btn__content {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: inherit;
+    text-transform: none;
+    color: #4d8291;
+  }
+
+  .header-content__contact-telegram-img {
+    width: 30px;
+    height: 30px;
+  }
+
+main{
+  padding-top: 70px;
+}
+
+.recommend-content{
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.recommend-main{
+  width: 70%;
+}
+
+.content-title{
+  margin-bottom: 15px;
+  font-size: 35px;
+  font-weight: 800;
+}
+
+.content-imgbox{
+  width: 100%;
+  height: 465px;
+  margin-bottom: 30px;
+}
+
+.content-description{
+  font-size: 20px;
+  font-weight: 500;
+  color: #222222;
+  line-height: 1.3;
+}
+
+.content-imgbox img{
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+
+aside{
+  width: 25%;
+}
+
+.aside-title{
+  margin-bottom: 15px;
+  font-size: 35px;
+  font-weight: 800;
+}
+
+.aside-item{
+  width: 100%;
+  height: 200px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.item-link{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.item-link .item-imgbox{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.item-imgbox img{
+  width: 100%;
+  height: 100%;
+}
+
+.item-content{
+  padding: 20px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  row-gap: 5px;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: brightness(45%);
+}
+
+.item-title{
+  font-size: 16px;
+  font-weight: 800;
+  color: white;
+}
+
+.item-subtitle{
+  font-size: 13px;
+  font-weight: 800;
+  color: white;  
+}

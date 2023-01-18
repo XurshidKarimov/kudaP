@@ -1,9 +1,9 @@
-@import "mixins.scss";
-@import "nullstyle.scss";
-@import "fonts.scss";
-@import "globalStyles.scss";
+@import "../scss/mixins.scss";
+@import "../scss/nullstyle.scss";
+@import "../scss/fonts.scss";
+@import "../scss/globalStyles.scss";
 @import "../scss/sections/header.scss";
 @import "../scss/sections/heropage.scss";
 @import "../scss/sections/search-block.scss";
 @import "../scss/sections/slider-content.scss";
-@import "../scss/sections/objects-architectures.scss";  
+@import "../scss/sections/objects-architectures.scss";

@@ -10,11 +10,21 @@
             @include mixins.font(30, 700, inherit, none, globalStyles.$main-color);
             margin-bottom: 15px;
         }
+        & .splide__list{
+            @include mixins.flex($rGap: 20, $cGap: 20);
+            flex-wrap: wrap;
+        }
         & .splide__slide{
             position: relative;
+            width: calc(100% / 3 - 15px);
+            min-height: 250px;
             border-radius: 10px;
             overflow: hidden;
             cursor: pointer;
+
+            & .img_box{
+                width: 100%;
+            }
             & img{
                 position: absolute;
                 width: 100%;
@@ -27,7 +37,7 @@
             position: absolute;
             width: 100%;
             height: 100%;
-            z-index: 2;
+            z-index: 5;
             & .card__title{
                 @include mixins.font(30, 600, inherit, none, white);
             }
